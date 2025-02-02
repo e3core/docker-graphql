@@ -29,10 +29,12 @@ jobs:
     - name: Buid Docker Image
       run: |
         docker build --tag floriambra/docker-graphql:0.0.1 .
+        docker build --tag floriambra/docker-graphql:latest .
 
     - name: Push Docker Image
       run: |
-        docker push floriambra/docker-graphql:0.0.1 
+        docker push floriambra/docker-graphql:0.0.1
+        docker push floriambra/docker-graphql:latest
         
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
